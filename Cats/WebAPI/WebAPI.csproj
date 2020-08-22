@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\FromApi\CP\**" />
+    <Content Remove="Controllers\FromApi\CP\**" />
+    <EmbeddedResource Remove="Controllers\FromApi\CP\**" />
+    <None Remove="Controllers\FromApi\CP\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\FromApi\CP\CourseProjectAssignmentController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseProjectConsultationController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseProjectConsultationDateController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseProjectController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseProjectGroupController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseProjectNewsController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseProjectSubjectController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseStudentController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseStudentMarkController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CourseUserController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CpCorrelationController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CpPercentageController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CpPercentageResultController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CpTaskSheetController.cs" />
+    <Compile Include="Controllers\FromApi\CP\CpTaskSheetTemplateController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.5.1" />
+    <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="3.0.0-rc.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Quartz" Version="3.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+    <PackageReference Include="Unity" Version="5.11.1" />
+    <PackageReference Include="Unity.ServiceLocation" Version="5.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Core.UI\Application.Core.UI.csproj" />
+    <ProjectReference Include="..\Application.Core\Application.Core.csproj" />
+    <ProjectReference Include="..\Application.Infrastructure\Application.Infrastructure.csproj" />
+    <ProjectReference Include="..\LMP.PlagiarismNet\LMP.PlagiarismNet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+  </ItemGroup>
+
+</Project>
